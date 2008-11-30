@@ -1,4 +1,4 @@
-Some ideas, maybe possible maybe not... :).. but they are the guide
+#summary Some ideas, maybe possible maybe not... :).. but they are the guide
 
 === Reflection ===
 Current functionality is enough to provide the communication between C++/V8, but extending the class CProxyV8 and keeping more information about methods and properties [http://en.wikipedia.org/wiki/Reflection_(computer_science) reflection] can be achieve to be use in C++ and JS.
@@ -38,5 +38,3 @@ C++
 }}}
 
 where "ajustToBounds" can be declared in C++ or JS.
-
-
