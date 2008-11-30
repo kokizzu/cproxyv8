@@ -16,6 +16,9 @@ CProxyV8 provide an easy way to expose properties and methods from C++ classes t
 
 ===Advantages==
 
-Types are handle automatically by C++ templates, if at some point the type of property or the type returned by methods need to be changed it does not affect the expose process to JS, the programmer change the type where the property or method is declared
+Types are handle automatically by C++ templates, if at some point the type of property or the type returned by methods needs to be changed it does not affect the expose process to JS, the programmer change the type where the property or method is declared
 
-Different kind of ProxyClass<T> can be implemented to achieve things like statistics and controlling access to properties and methods.
+Different kind of ProxyClass can be implemented to achieve things like statistics and controlling access to properties and methods.
+
+ProxyClass behavior is almost like the Class class in Java.
+
