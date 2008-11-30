@@ -84,4 +84,36 @@ int main(int argc, char* argv[])
   ...
 }}}
 
-= Java Script Code =
+= Shell Execution =
+
+{{{
+V8 version 0.4.3.1
+> x = new Point()
+[object Point]
+> line = new Line()
+[object Line]
+> x.x
+0
+> x.x = 10
+10
+> line.getEnd().x
+0
+> line.getEnd().x = 10
+10
+> line.getEnd().x
+10
+> end = line.getEnd();
+[object Point]
+> end.x
+10
+> end.Translate(10,10)
+true
+> end.x
+20
+> line.getEnd().x
+20
+> x.x
+10
+>
+}}}
+
