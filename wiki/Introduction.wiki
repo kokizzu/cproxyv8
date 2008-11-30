@@ -10,14 +10,14 @@ CProxyV8 provide an easy way to expose properties and methods from C++ classes t
 
 3. Provide an easy way to expose methods from C++ objects to Java Script V8
 
-4. Avoid the need of MACROS to declare types or keep tracking of all classes. The compiler must take care of this with the templates.
+4. Avoid the need of MACROS to declare types or keep tracking of all classes. The compiler must take care of this with templates.
 
 5. Achive this without modification of V8 code.
 
 ===Advantages==
 
-Types are handle automatically by C++ templates, if at some point the type of property or the type returned by methods needs to be changed it does not affect the expose process to JS, the programmer change the type where the property or method is declared
+Types are handle automatically by C++ templates, if at some point the type of property or the type returned by methods needs to be changed, it does not affect the expose process to JS, the programmer can change the type where the property or method is declared
 
 Different kind of CProxyClass can be implemented to achieve things like statistics and controlling access to properties and methods.
 
-CProxyClass behavior is almost like the Class class in Java, if it beacons useful nice reflection can be archive adding more functionality to this class or a child of it, and the information will be available to C++ code.
+CProxyClass behavior is almost like the Class class in Java, if it becomes useful nice reflection can be archive adding more functionality to this class or a child of it, and the information will be available to C++ code.
