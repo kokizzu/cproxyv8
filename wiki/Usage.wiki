@@ -1,4 +1,4 @@
-#summary Example - how to use the code
+#summary Basic Example - how to expose properties and methods
 
 = Basic Example =
 
