@@ -1,0 +1,7 @@
+= Introduction =
+
+This project is aimed at C++ developers who want to use V8 Embedded in their applications.
+
+CProxyV8 provide an easy way to expose properties and methods from C++ classes to Java Script using [http://code.google.com/apis/v8/terms.html V8] engine without the need to specify callbacks for each item.
+
+= Details =
