@@ -4,4 +4,14 @@ This project is aimed at C++ developers who want to use V8 Embedded in their app
 
 CProxyV8 provide an easy way to expose properties and methods from C++ classes to Java Script using [http://code.google.com/apis/v8/terms.html V8] engine without the need to specify callbacks for each item.
 
-= Details =
+= Utility Objectives =
+
+1. Avoid the need of specifics callbacks declarations required by V8 and replace it by hidden generic callbacks directly to the object instance.
+
+2.Provide an easy way to expose properties from C++ objects to Java Script V8
+
+3. Provide an easy way to expose methods from C++ objects to Java Script V8
+
+4. Avoid the need of MACROS to declare types or keep tracking of all classes. The compiler must take care of this with the templates.
+
+5. Achive this goals without modification of V8 code.
