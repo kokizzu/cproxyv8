@@ -1,4 +1,4 @@
-More detailed documentation
+#summary More detailed documentation
 
 = Handy macros =
 Everything accessed with the following macros.
