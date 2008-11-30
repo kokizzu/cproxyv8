@@ -1,0 +1,83 @@
+Example on how to use the library
+
+= Basic Example =
+
+This example show to C++ classes Point and Line and how the properties and methods are exposed to Java Script.
+
+The example is in file shellcpv8.cc part of the download code and is modification of shell.cc that comes with V8. 
+
+= Code =
+
+{{{
+class Point 
+{
+	public:
+   /** Constructor without params is required */
+		Point(int px = 0, int py = 0) : x_(px), y_(py) {}
+    Point(Point* p) : x_(p->x_), y_(p->y_) {}
+
+		int x_;
+    int y_;
+
+   /** Example call to function without params */
+    int GetManhattanLength()  { return std::abs(x_) - std::abs(y_); }
+
+   /** this will create a JS object, with JS destructor */
+    Point* Copy() { return new Point(); }
+
+   /** Example call to function with params */
+    v8::Handle<v8::Value> Translate(const v8::Arguments& args) 
+    { 
+      // throw if we didn't get 2 args
+      if (args.Length() != 2)
+        return ThrowException(v8::String::New("Expected 2 arguments"));
+
+      x_ += args[0]->Int32Value();
+      y_ += args[1]->Int32Value();
+      return v8::True(); 
+    };
+};
+
+class Line
+{
+public:
+  /** Constructor without params is required */
+  
+  /** Example of object property, it can be manipulate directly */
+  Point start;  
+
+  /** this will create a JS object, without destructor and a reference to this 
+   *  end instance 
+   *
+   */
+  Point& GetEnd() { return end; }
+
+private:
+  Point end;
+};
+
+int main(int argc, char* argv[]) 
+{
+  v8::V8::SetFlagsFromCommandLine(&argc, argv, true);
+  v8::HandleScope handle_scope;
+
+  // Create a template for the global object.
+  v8::Handle<v8::ObjectTemplate> global = v8::ObjectTemplate::New();
+
+  CPROXYV8_PROPERTY_ID(Point,x_,x,true,true);
+  CPROXYV8_PROPERTY_ID(Point,y_,y,true,true);
+
+  CPROXYV8_METHOD_ID(Point,Copy, copy);
+  CPROXYV8_METHOD_ID(Point,GetManhattanLength, getManhattanLength);
+  CPROXYV8_METHOD(Point,Translate);
+  
+  CPROXYV8_PROPERTY(Line,start,true,true);
+
+  CPROXYV8_METHOD_ID(Line,GetEnd,getEnd);
+
+  global->Set(v8::String::New("Point"), CPROXYV8_CLASS(Point)->GetFunctionTemplate()); // add Point to JS
+  global->Set(v8::String::New("Line"), CPROXYV8_CLASS(Line)->GetFunctionTemplate()); // add Line to JS
+  ...
+}}}
+
+
