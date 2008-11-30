@@ -25,7 +25,7 @@
    
          Tclass getStackReference(); //WARNING: this will provoke invalid memory ref.
    
-         Tpri  getStackReference(); //this is ok.
+         Tpri  getPrimitive(); //this is ok.
       };
    }}}
 
