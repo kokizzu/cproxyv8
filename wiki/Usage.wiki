@@ -1,4 +1,4 @@
-Example - how to use the code
+#summary Example - how to use the code
 
 = Basic Example =
 
