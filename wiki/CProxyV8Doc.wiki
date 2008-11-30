@@ -1,5 +1,55 @@
 #summary More detailed documentation
 
+= Methods/Properties in C++ class - Take Note =
+
+   C++
+   {{{
+      class A
+      {
+      public:
+        Type b;   //ok
+        Type* b2; //WARNNING: GC will try to delete this if it is exposed
+        
+        primitive p; //ok
+   
+       // If type is a class type:
+   
+         Type* getPointer(); //Type must have a CProxyV8<Type> representation
+         Type& getReference(); //Type must have a CProxyV8<Type> representation
+   
+         Type  getStackReference(); //do not Expose this, it will provoke invalid mem ref.
+   
+      // If type is a basic type like int:
+         Type  getStackReference(); //this is ok.
+      };
+   }}}
+
+   *_Return values_
+       If Type is a *class* it must have a CProxyV8<Type> representation. It must be declared as CPROXYV8_CLASS(class) called somewhere.
+
+       *Type - This make a V8 wrapper for the object, 
+               and it will be destroy by the GC
+{{{
+               Type* getPointer() { return new Type(); }; //OK, obj will be destroy by GC
+               Type* getPointer() { return &t;    }; //Error: GC will try to dispose this
+}}}
+
+       *Type& - This make a V8 wrapper for the object, 
+               it will be not destroy by GC
+{{{
+               Type& getPointer() { return new Type(); }; //Error: memory leak
+               Type& getPointer() { return &t;    }; //Ok: GC will NOT try to dispose this
+}}}
+
+       *Type  - If type is a Class:
+               This make a V8 wrapper for the object in the stack 
+               and will be invalid  as soon as the V8 call ends. 
+               DO NOT USE IT FOR CLASSES
+               
+               If type is primitive:
+               primitive value like int, bool, double, etc are OK
+
+
 = Handy macros =
 Everything accessed with the following macros.
 
