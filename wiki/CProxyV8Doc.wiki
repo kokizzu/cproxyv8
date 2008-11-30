@@ -26,6 +26,10 @@
          Tclass getStackReference(); //WARNING: this will provoke invalid memory ref.
    
          Tpri  getPrimitive(); //this is ok.
+
+         //Generic call, at this moment is the only way to pass parameters 
+         //to the object
+         v8::Handle<v8::Value> methodName(const v8::Arguments& args)
       };
    }}}
 
