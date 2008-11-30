@@ -1,4 +1,4 @@
-Example on how to use the library
+Example - how to use the code
 
 = Basic Example =
 
@@ -7,7 +7,7 @@ This example show to C++ classes Point and Line and how the properties and metho
 The example is in file shellcpv8.cc part of the download code and is modification of shell.cc that comes with V8. 
 
 = C++ Code =
-_Class declarations_
+==Class declarations==
 {{{
 class Point 
 {
@@ -57,7 +57,8 @@ private:
 };
 }}}
 
-_Main function_ expose properties and methods with CProxyV8 and register the function template for each class in the global.
+==Main function== 
+Expose properties and methods with CProxyV8 and register the function template for each class in the global.
 
 {{{
 int main(int argc, char* argv[]) 
@@ -84,7 +85,7 @@ int main(int argc, char* argv[])
   ...
 }}}
 
-= Shell Execution =
+==Shell Execution==
 
 {{{
 V8 version 0.4.3.1
@@ -116,4 +117,3 @@ true
 10
 >
 }}}
-
