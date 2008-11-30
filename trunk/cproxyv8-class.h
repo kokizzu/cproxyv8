@@ -568,12 +568,6 @@ void ProxyClass<T>::Expose( TProperty T::*property, char* propertyName,
   ASSERT(propertyName);
   ASSERT(setter || getter);
 
-  if (className_.IsEmpty())
-  {
-    Utils::ReportApiFailure("cProxyV8::ProxyClass::Expose", "Error CProxyV8::ProxyClass is not initialized - call PROXY_CLASS(class) first!");  
-    return;
-  }
-
 	AccessorGetter getterAccessor = getter ? Accessor_GetProperty : 0;
 	AccessorSetter setterAccessor = setter ? Accessor_SetProperty : 0;
   Handle<Value> data = External::New(accessor);
@@ -603,13 +597,6 @@ void ProxyClass<T>::Expose(Handle<Value> (T::*function) (const Arguments& args),
 template<class T>
 void ProxyClass<T>::Expose(AccessorFunction* accessorFunction, char* functionName)
 {
-  ASSERT(functionName);
-  if (className_.IsEmpty())
-  {
-    Utils::ReportApiFailure("cProxyV8::ProxyClass::Expose", "Error CProxyV8::ProxyClass is not initialized - call PROXY_CLASS(class) first!");  
-    return;
-  }
-
   Handle<Value> data = External::New(accessorFunction);
   Local<FunctionTemplate> func = FunctionTemplate::New();
   func->SetCallHandler(Accessor_Function,data);  
