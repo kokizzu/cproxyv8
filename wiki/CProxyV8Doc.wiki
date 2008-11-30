@@ -1,11 +1,12 @@
 More detailed documentation
 
-= Handy macro =
+= Handy macros =
 Almost all you will need is accessed with the following macros.
 
 ==Expose a class to JS==
-CPROXYV8_CLASS(Class)
+===CPROXYV8_CLASS(class)===
 Class: is the name of the class in C++ and in JS
+
 C++
 {{{
 ProxyClass<Point>* cPoint = PROXY_CLASS(Point);
@@ -15,14 +16,33 @@ Java Script
 x = new Point();
 }}}
 
-==CPROXYV8_CLASS_ID(Class,ID)==
+===CPROXYV8_CLASS_ID(class,ID)===
 Class: is the name of the class in C++
 ID: is the name to create objects in JS
+
 C++
 {{{
-ProxyClass<Point>* cPoint = PROXY_CLASS(Point,XY);
+  ProxyClass<Point>* cPoint = PROXY_CLASS(Point,XY);
 }}}
 Java Script
 {{{
-x = new XY();
+  x = new XY();
 }}}
+
+==Expose a property class to JS==
+===CPROXYV8_PROPERTY(class, property, get, set);===
+class: is the name of the class in C++
+property: is the name of the property declared in the class
+get: true/false true allow the value of the property to be seeing in JS
+set: true/false true allow the value change from JS
+
+C++
+{{{
+  CPROXYV8_PROPERTY(Point, x, true, true);
+}}}
+Java Script
+{{{
+  p = new Point();
+  p.x = p.x + 10
+}}}
+
