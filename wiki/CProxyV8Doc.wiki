@@ -1,0 +1,28 @@
+More detailed documentation
+
+= Handy macro =
+Almost all you will need is accessed with the following macros.
+
+==Expose a class to JS==
+CPROXYV8_CLASS(Class)
+Class: is the name of the class in C++ and in JS
+C++
+{{{
+ProxyClass<Point>* cPoint = PROXY_CLASS(Point);
+}}}
+Java Script
+{{{
+x = new Point();
+}}}
+
+==CPROXYV8_CLASS_ID(Class,ID)==
+Class: is the name of the class in C++
+ID: is the name to create objects in JS
+C++
+{{{
+ProxyClass<Point>* cPoint = PROXY_CLASS(Point,XY);
+}}}
+Java Script
+{{{
+x = new XY();
+}}}
