@@ -4,7 +4,7 @@ Very Important Issue, please be carefully
 
 _I can not be more panic about this issue.. *lol*_
 
-This library allow you to expose objects from C++ directly to the Java Script, this will lead to the possible following situation (see the Usage page to check the code):
+This library allow you to expose objects created in C++ directly to the Java Script, this may lead to the following situation (full code in Usage page):
 
 Java Script shell:
 {{{
@@ -26,5 +26,3 @@ Do not expose references to this internal objects, unless you are complete sure 
 =Possible Implementation Solutions=
 
 I still thinking how to solve the problem, main idea is to add listeners in both sides to synchronized the disposal process.
-
-
