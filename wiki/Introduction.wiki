@@ -18,6 +18,6 @@ CProxyV8 provide an easy way to expose properties and methods from C++ classes t
 
 Types are handle automatically by C++ templates, if at some point the type of property or the type returned by methods needs to be changed it does not affect the expose process to JS, the programmer change the type where the property or method is declared
 
-Different kind of Proxy Class can be implemented to achieve things like statistics and controlling access to properties and methods.
+Different kind of CProxyClass can be implemented to achieve things like statistics and controlling access to properties and methods.
 
-Proxy Class behavior is almost like the Class class in Java, if it beacons useful nice reflection can be archive adding more functionality to this class or a child of it, and the information will be available to C++ code.
+CProxyClass behavior is almost like the Class class in Java, if it beacons useful nice reflection can be archive adding more functionality to this class or a child of it, and the information will be available to C++ code.
