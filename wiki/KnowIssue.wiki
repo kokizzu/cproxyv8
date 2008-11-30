@@ -1,0 +1,30 @@
+Very Important Issue, please be carefully
+
+= Invalid Memory References =
+
+_I can not be more panic about this issue.. *lol*_
+
+This library allow you to expose objects from C++ directly to the Java Script, this will lead to the possible following situation (see the Usage page to check the code):
+
+Java Script shell:
+{{{
+   >end = line.getEnd();   
+}}}
+
+When the code exec this, the instance Point who belongs to Line is now exposed to Java Script and can be accessed directly.
+
+{{{
+   >end.x = 10;   
+}}}
+
+Now the PROBLEM: if line is disposed by the garbage collector or by the C++ program, end will be pointed to an invalid reference. When line is disposed the instance of point inside is disposed too.
+
+=Usage solutions=
+
+Do not expose references to this internal objects, unless you are complete sure that they are going to be available all the times.
+
+=Possible Implementation Solutions=
+
+I still thinking how to solve the problem, main idea is to add listeners in both sides to synchronized the disposal process.
+
+
