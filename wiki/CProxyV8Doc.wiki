@@ -3,12 +3,12 @@
 = Abbreviations =
 
 
-  *GC - Java Script Garbage Collector
-  *class - declared class in C++
-  *exposed - class/method/property that has been exposed to Java Script
-  *Tclass - C++ class type (Point, Line, etc)
-  *TPri   - Primitive type (int, bool, double, etc)
-  *Type   - Tclass | Tpri
+  * GC - Garbage Collector
+  * class - declared class in C++
+  * exposed - class/method/property that has been exposed to Java Script
+  * Tclass - C++ class type (Point, Line, etc)
+  * TPri   - Primitive type (int, bool, double, etc)
+  * Type   - Tclass | Tpri
 
 = Methods/Properties in C++ class - Take Note =
 
