@@ -6,17 +6,17 @@ This example show to C++ classes Point and Line and how the properties and metho
 
 The example is in file shellcpv8.cc part of the download code and is modification of shell.cc that comes with V8. 
 
-= Code =
-
+= C++ Code =
+_Class declarations_
 {{{
 class Point 
 {
 	public:
    /** Constructor without params is required */
-		Point(int px = 0, int py = 0) : x_(px), y_(py) {}
+    Point(int px = 0, int py = 0) : x_(px), y_(py) {}
     Point(Point* p) : x_(p->x_), y_(p->y_) {}
 
-		int x_;
+    int x_;
     int y_;
 
    /** Example call to function without params */
@@ -55,7 +55,11 @@ public:
 private:
   Point end;
 };
+}}}
 
+_Main function_ expose properties and methods with CProxyV8 and register the function template for each class in the global.
+
+{{{
 int main(int argc, char* argv[]) 
 {
   v8::V8::SetFlagsFromCommandLine(&argc, argv, true);
@@ -80,4 +84,4 @@ int main(int argc, char* argv[])
   ...
 }}}
 
-
+= Java Script Code =
