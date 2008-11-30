@@ -20,8 +20,8 @@
         type b;   //ok
         type* b2; //ok-WARNNING: GC will delete this if is exposed
    
-         Tclass* getPointer(); //ok: GC will delete this
-         Tclass& getReference(); //ok: GC will NOT delete this
+         Tclass* getPointer(); //ok: GC will delete the returned obj
+         Tclass& getReference(); //ok: GC will NOT delete the returned obj
    
          Tclass getStackReference(); //WARNING: this will provoke invalid memory ref.
    
