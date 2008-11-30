@@ -4,86 +4,84 @@ More detailed documentation
 Almost all you will need is accessed with the following macros.
 
 *Macro parameters*:
-      *CLASS*: the name of the class in C++
-      *PROPERTY*: the name of the property in C++
-      *METHOD*: the name of the method in C++
-      *ID*: the name for JS
-      *GET*: true/false true allow the value of the property to used in JS
-      *SET*: true/false true allow the value change from JS
+      **CLASS*: the name of the class in C++
+      **PROPERTY*: the name of the property in C++
+      **METHOD*: the name of the method in C++
+      **ID*: the name for JS
+      **GET*: true/false true allow the value of the property to used in JS
+      **SET*: true/false true allow the value change from JS
 
 Macros whit ID parameter allow the programmer to change the name of the class, property or method in Java Script.
 
-==Expose a class to JS==
+==Expose a classes to JS==
   ===CPROXYV8_CLASS(class)===
 
-C++
-{{{
-ProxyClass<Point>* cPoint = PROXY_CLASS(Point);
-}}}
-Java Script
-{{{
-x = new Point();
-}}}
+      C++
+      {{{
+        ProxyClass<Point>* cPoint = PROXY_CLASS(Point);
+      }}}
+      Java Script
+      {{{
+        x = new Point();
+      }}}
 
   ===CPROXYV8_CLASS_ID(class,ID)===
 
-C++
-{{{
-  ProxyClass<Point>* cPoint = PROXY_CLASS(Point,XY);
-}}}
-Java Script
-{{{
-  x = new XY();
-}}}
+      C++
+      {{{
+        ProxyClass<Point>* cPoint = PROXY_CLASS(Point,XY);
+      }}}
+      Java Script
+      {{{
+        x = new XY();
+      }}}
 
 ==Expose a property class to JS==
   ===CPROXYV8_PROPERTY(class, property, get, set);===
 
-C++
-{{{
-  CPROXYV8_PROPERTY(Point, x, true, true);
-}}}
-Java Script
-{{{
-  p = new Point();
-  p.x = p.x + 10
-}}}
+      C++
+      {{{
+        CPROXYV8_PROPERTY(Point, x, true, true);
+      }}}
+      Java Script
+      {{{
+        p = new Point();
+        p.x = p.x + 10
+      }}}
 
-==Expose a property class to JS==
   ===CPROXYV8_PROPERTY_ID(class, property, id, get, set);===
 
-C++
-{{{
-  CPROXYV8_PROPERTY(Point, equis, x, true, true);
-}}}
-Java Script
-{{{
-  p = new Point();
-  p.x = p.x + 10
-}}}
+      C++
+      {{{
+        CPROXYV8_PROPERTY(Point, equis, x, true, true);
+      }}}
+      Java Script
+      {{{
+        p = new Point();
+        p.x = p.x + 10
+      }}}
 
 ==Expose a method class to JS==
   ===CPROXYV8_METHOD(class, method);===
 
-C++
-{{{
-  CPROXYV8_METHOD(Point, Translate);
-}}}
-Java Script
-{{{
-  p = new Point();
-  p.Translate(10,10);
-}}}
+      C++
+      {{{
+        CPROXYV8_METHOD(Point, Translate);
+      }}}
+      Java Script
+      {{{
+        p = new Point();
+        p.Translate(10,10);
+      }}}
 
   ===CPROXYV8_METHOD_ID(class, method, id);===
 
-C++
-{{{
-  CPROXYV8_PROPERTY(Point, Translate, translate);
-}}}
-Java Script
-{{{
-  p = new Point();
-  p.translate(10,10);
-}}}
-
+      C++
+      {{{
+        CPROXYV8_PROPERTY(Point, Translate, translate);
+      }}}
+      Java Script
+      {{{
+        p = new Point();
+        p.translate(10,10);
+      }}}
