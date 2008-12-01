@@ -1,7 +1,6 @@
-#sidebar TableOfContents
-
 #summary Some are possible others maybe... :).. but they are the guide
 
+#sidebar TableOfContents
 === Reflection ===
 Current functionality is enough to provide the communication between C++/V8.
 Extending the class CProxyV8 and keeping more information about methods and properties can be achieve [http://en.wikipedia.org/wiki/Reflection_(computer_science) reflection] to be use in C++ and JS.
