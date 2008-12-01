@@ -24,7 +24,7 @@ Usage: [http://code.google.com/p/cproxyv8/wiki/Usage Basic Example]
 ==== Types ====
 Types are handle automatically by C++ templates, if at some point the type of property or the type returned by methods needs to be changed, it does not affect the expose process to JS, the programmer can change the type where the property or method is declared
 
-==== Access control, statistics ====
+==== Access control, statistics, etc ====
 Different kind of CProxyClass can be implemented to achieve things like statistics and controlling access to properties and methods.
 
 ==== Reflection (to be implemented) ====
