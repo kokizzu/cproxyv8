@@ -1,7 +1,7 @@
 #summary Basic Example - how to expose properties and methods
 #sidebar TableOfContents
 
-The project only contains source code, so you will need to download and compile it.
+To test this example download the code, you will need the lasted [http://code.google.com/p/v8/wiki/Source?tm=4 V8 source code] and [http://code.google.com/p/cproxyv8/source/checkout CProxyV8 Source Code]
 
 = Basic Example =
 
