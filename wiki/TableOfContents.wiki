@@ -1,5 +1,5 @@
  * [Introduction]
-  * [Notes]
+ * [Notes]
  * [Usage]
  * [CProxyV8Doc]
  * [KnowIssue]
