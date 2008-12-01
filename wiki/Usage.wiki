@@ -1,6 +1,8 @@
 #summary Basic Example - how to expose properties and methods
 #sidebar TableOfContents
 
+The project only contains source code, so you will need to download and compile it.
+
 = Basic Example =
 
 This example show to C++ classes Point and Line and how the properties and methods are exposed to Java Script.
