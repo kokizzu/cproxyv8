@@ -1,5 +1,5 @@
+#summary Version, Compiler
 #sidebar TableOfContents
-Version, Compiler
 
 = Version =
 
