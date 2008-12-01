@@ -14,4 +14,4 @@
 <p>.</p>
 <p>.</p>
 <p>.</p>
-   .............. http://img81.imageshack.us/img81/4500/cproxyv8sl2.png
+  * http://img81.imageshack.us/img81/4500/cproxyv8sl2.png
