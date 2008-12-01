@@ -1,4 +1,3 @@
-#sidebar TOCArticles
 * [Articles Introduction]
     * [ArticlesXSS Web security]
     * [ArticlesDom DOM manipulation]
