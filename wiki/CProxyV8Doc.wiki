@@ -16,25 +16,32 @@
    {{{
       class A
       {
+      private:
+        Tclass iClass;
       public:
         type b;   //ok
         type* b2; //ok-WARNNING: GC will delete this if is exposed
    
-         Tclass* getPointer(); //ok: GC will delete the returned obj
-         Tclass& getReference(); //ok: GC will NOT delete the returned obj
-   
-         Tclass getStackReference(); //WARNING: this will provoke invalid memory ref.
-   
-         Tpri  getPrimitive(); //this is ok.
+         //ok: GC will delete the returned  obj
+         Tclass* getPointer() {return new Tclass(); };
 
-         //Generic call, at this moment is the only way to pass parameters 
+         //ok: GC will NOT delete the returned obj
+         Tclass& getReference() {return obj;);
+   
+         //this is ok.
+         Tpri  getPrimitive(); 
+
+         //ok: Generic call, at this moment is the only way to pass parameters 
          //to the object
          v8::Handle<v8::Value> methodName(const v8::Arguments& args)
+
+         //WARNING-FATAL: this will provoke invalid memory ref.
+         Tclass getStackReference() {return obj;); 
       };
    }}}
 
 = Handy macros =
-Everything accessed with the following macros.
+Everything is accessed with the following macros.
 
 *Macro parameters*:
       * CLASS: the name of the class in C++
