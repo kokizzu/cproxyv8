@@ -1,4 +1,5 @@
-#summary Thanks to...
+#sidebar TableOfContents
+Thanks to...
 
 V8 Google project...thanks for this great project.
 
