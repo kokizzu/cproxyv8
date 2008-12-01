@@ -1,4 +1,4 @@
-#summary Some are possible others not... :).. but they are the guide
+#summary Some are possible others maybe... :).. but they are the guide
 
 === Reflection ===
 Current functionality is enough to provide the communication between C++/V8, but extending the class CProxyV8 and keeping more information about methods and properties [http://en.wikipedia.org/wiki/Reflection_(computer_science) reflection] can be achieve to be use in C++ and JS.
