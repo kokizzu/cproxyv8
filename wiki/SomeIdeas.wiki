@@ -5,7 +5,7 @@
 Current functionality is enough to provide the communication between C++/V8.
 Extending the class CProxyV8 and keeping more information about methods and properties can be used to achieve [http://en.wikipedia.org/wiki/Reflection_(computer_science) reflection] to be use in C++ and JS.
 
-=== Call Methods from C++ that may invoke C++/JS implementation ===
+=== Call Methods from C++ that may execute C++/JS implementation ===
 
 CProxyClass will provide an easy way to call functions declared in JS from c++
 
