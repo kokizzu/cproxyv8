@@ -1,5 +1,5 @@
+#summary Basic Example - how to expose properties and methods
 #sidebar TableOfContents
-Basic Example - how to expose properties and methods
 
 = Basic Example =
 
