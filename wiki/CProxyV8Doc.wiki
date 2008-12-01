@@ -1,5 +1,5 @@
+#summary More detailed documentation
 #sidebar TableOfContents
-More detailed documentation
 
 = Abbreviations =
 
