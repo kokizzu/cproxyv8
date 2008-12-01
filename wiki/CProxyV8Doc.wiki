@@ -33,32 +33,6 @@
       };
    }}}
 
-   *_Return values_
-       If Type is a *class* it must have a CProxyV8<Type> representation. It must be declared as CPROXYV8_CLASS(class) called somewhere.
-
-       *Tclass - This make a V8 wrapper for the object, 
-               and it will be destroy by the GC
-{{{
-           Tclass* getPointer() { return new Type(); }; //OK, obj will be destroy by GC
-           Tclass* getPointer() { return &t;    }; //Error: GC will try to dispose this
-}}}
-
-       *Tclass& - This make a V8 wrapper for the object, 
-               it will be not destroy by GC
-{{{
-           Tclass& getPointer() { return new Type(); }; //Error: memory leak
-           Tclass& getPointer() { return &t;    }; //Ok: GC will NOT try to dispose this
-}}}
-
-       *Tclass  - If type is a Class:
-               This make a V8 wrapper for the object in the stack 
-               and will be invalid  as soon as the V8 call ends. 
-               DO NOT USE IT FOR CLASSES
-               
-        *Tpri
-               primitive value like int, bool, double, etc are OK
-
-
 = Handy macros =
 Everything accessed with the following macros.
 
