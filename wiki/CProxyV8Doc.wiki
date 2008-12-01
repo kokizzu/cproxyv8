@@ -18,6 +18,7 @@
       {
       private:
         Tclass obj;
+
       public:
         type b;   //ok
         type* b2; //ok-WARNNING: GC will delete this if is exposed
