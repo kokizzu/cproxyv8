@@ -1,4 +1,5 @@
-#sidebar TableOfContents Some are possible others maybe... :).. but they are the guide
+#sidebar TableOfContents
+Some are possible others maybe... :).. but they are the guide
 
 === Reflection ===
 Current functionality is enough to provide the communication between C++/V8.
