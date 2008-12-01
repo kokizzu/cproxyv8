@@ -14,6 +14,10 @@ CProxyV8 provide an easy way to expose properties and methods from C++ classes t
 
 5. Achive this without modification of V8 code.
 
+6. Reflexion_(to be implemented)_, provide a way to call from C++ methods in C++ or JS with the same syntax. See [http://code.google.com/p/cproxyv8/wiki/SomeIdeas Ideas]
+
+Usage: [http://code.google.com/p/cproxyv8/wiki/Usage Basic Example]
+
 ===Advantages==
 
 Types are handle automatically by C++ templates, if at some point the type of property or the type returned by methods needs to be changed, it does not affect the expose process to JS, the programmer can change the type where the property or method is declared
