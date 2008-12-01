@@ -1,5 +1,5 @@
- * [Introduction Version,Compiler,etc]
- * [Notes]
+ * [Introduction]
+ * [Notes Version,Compiler,etc]
  * [Usage]
  * [CProxyV8Doc]
  * [KnowIssue]
