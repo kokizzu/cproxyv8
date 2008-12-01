@@ -1,7 +1,7 @@
 #sidebar TableOfContents
 Thanks to...
 
-V8 Google project...thanks for this great project.
+V8 Google project...for this great project.
 
 V8 Community Members... which provide great source of comments and examples.
   Especial thanks to
