@@ -14,7 +14,7 @@ C++
   p.call(pointInstance, "moveTo", 10, 10);
 }}}
 
-where "moveTo" can be declared in C++ or JS. If for example "moveTo" is in JS and have efficiency problems it can be moved to C++ without impacting the code.
+where "moveTo" can be declared in C++ or JS. If for example "moveTo" is declared in JS and have efficiency problems it can be moved to C++ without impacting the code.
 
 === Auto get/set methods ===
 
