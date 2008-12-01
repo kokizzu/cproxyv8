@@ -25,4 +25,4 @@ Types are handle automatically by C++ templates, if at some point the type of pr
 
 Different kind of CProxyClass can be implemented to achieve things like statistics and controlling access to properties and methods.
 
-CProxyClass behavior is almost like the Class class in Java, if it becomes useful nice [http://en.wikipedia.org/wiki/Reflection_(computer_science) reflection] can be archive adding more functionality to this class or a child of it, and the information will be available to C++ code.
+CProxyClass behavior is almost like the Class class in Java, if it becomes useful nice [http://en.wikipedia.org/wiki/Reflection_(computer_science) reflection] can be achieve by adding more functionality to this class or a child of it
