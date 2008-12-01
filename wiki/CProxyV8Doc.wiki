@@ -22,10 +22,10 @@
         type b;   //ok
         type* b2; //ok-WARNNING: GC will delete this if is exposed
    
-         //ok: GC will delete the returned  obj
+         //ok POINTER: GC will delete the returned  obj
          Tclass* getPointer() {return new Tclass(); };
 
-         //ok: GC will NOT delete the returned obj
+         //ok REFERENCE: GC will NOT delete the returned obj
          Tclass& getReference() {return obj;);
    
          //this is ok.
