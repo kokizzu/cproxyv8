@@ -3,7 +3,6 @@
 
 = Invalid Memory References =
 
-_I can not be more panic about this issue.. *lol*_
 
 This library allow you to expose objects created in C++ directly to the Java Script, this may lead to the following situation (full code in Usage page):
 
