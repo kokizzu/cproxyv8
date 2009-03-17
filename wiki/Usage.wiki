@@ -63,7 +63,7 @@ The example is in file shellcpv8.cc part of the download code and is modificatio
 ==Main function== 
    Expose properties and methods with CProxyV8 and register the function template for each    class in the global.
 
-===Using the class directly===
+===Using the ProxyClass directly===
 {{{
    int main(int argc, char* argv[]) 
    {
