@@ -63,6 +63,36 @@ The example is in file shellcpv8.cc part of the download code and is modificatio
 ==Main function== 
    Expose properties and methods with CProxyV8 and register the function template for each    class in the global.
 
+===Using the class directly===
+{{{
+   int main(int argc, char* argv[]) 
+   {
+     v8::V8::SetFlagsFromCommandLine(&argc, argv, true);
+     v8::HandleScope handle_scope;
+
+     // Create a template for the global object.
+     v8::Handle<v8::ObjectTemplate> global = v8::ObjectTemplate::New();
+
+     ProxyClass<Foo>* pPoint = ProxyClass<Foo>::instance(); //Get the proxy class for Point
+
+     pPoint->Expose(Point::x_,"x",true,true); //expose x_ for read/write
+     pPoint->Expose(Point::y_,"y",true,true); //expose y_ for read/write
+
+     pPoint->Expose(Point::Copy, "copy");
+     pPoint->Expose(Point::GetManhattanLength, "getManhattanLength");
+     pPoint->Expose(Point::Translate, "translate");
+  
+     ProxyClass<Line>* pLine = ProxyClass<Line>::instance(); //Get the proxy class for Line
+     pPoint->Expose(Line::start,"start",true,true); //expose object start for read/write
+     pPoint->Expose(Line::GetEnd, "getEnd");
+
+     global->Set(v8::String::New("Point"), pPoint->GetFunctionTemplate()); // add Point to JS
+     global->Set(v8::String::New("Line"), pLine->GetFunctionTemplate()); // add Line to JS
+     ...
+}}}
+
+===With helper macros===
+
 {{{
    int main(int argc, char* argv[]) 
    {
